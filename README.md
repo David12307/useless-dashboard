@@ -1,1 +1,1 @@
-# stupid-dashboard
+# useless-dashboard
