@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Roboto+Slab:wght@500&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+      header {
+        position: absolute;
+        background-color: white;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 7vh;
+        font-family: 'Erica One', cursive;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      #username {
+        padding-right: 50px;
+      }
+
+      #announcements {
+        background-color: white;
+        position: absolute;
+        top: 10vh;
+        left: 1vw;
+        height: 85vh;
+        width: 60vw;
+        border-radius: 20px;
+      }
+
+      .ad {
+        background-color: #adb5bd;
+        margin-left: 1vw;
+        margin-top: 2vh;
+        width: 800px;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: 'Zen Kurenaido', sans-serif;
+        color: black;
+      }
+
+      #pfp {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      form {
+          background-color: white;
+          position: absolute;
+          top: 10vh;
+          left: 62vw;
+          border-radius: 20px;
+          width: 37vw;
+          height: 85vh;
+      }
+      
+      #submitButton {
+        border: 0px;
+        outline: none;
+        background-color: #6c757d;
+        width: 130px;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 70%;
+        margin-left: 40%;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+    }
+
+    input {
+      outline: none;
+      border: 0px;
+      width: 300px;
+      height: 50px;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20%;
+      margin-left: 20%;
+      background-color: #E8E8E8;
+    }
+
+    </style>
+</head>
+<body style="background-color: #dee2e6;">
+  <header>
+    <p id="username"><%= username %></p>
+  </header>
+
+  <div id="announcements">
+    <% messages.forEach(message => { %>
+      <div class="ad"><%= message %></div>
+    <% }) %>  
+  </div>
+
+  <form action="/login/messageuploaded" method="post">
+    <input name="messagetoupload" type="text" placeholder="Message">
+    <br>
+    <button id="submitButton" type="submit">Upload</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Roboto+Slab:wght@500&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+      header {
+        position: absolute;
+        background-color: white;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 7vh;
+        font-family: 'Erica One', cursive;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      #username {
+        padding-right: 50px;
+      }
+
+      #announcements {
+        background-color: white;
+        position: absolute;
+        top: 10vh;
+        left: 1vw;
+        height: 85vh;
+        width: 98vw;
+        border-radius: 20px;
+      }
+
+      .ad {
+        background-color: #adb5bd;
+        margin-left: 1vw;
+        margin-top: 2vh;
+        width: 1000px;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: 'Zen Kurenaido', sans-serif;
+        color: black;
+      }
+
+      #pfp {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+    </style>
+</head>
+<body style="background-color: #dee2e6;">
+  <header>
+    <p id="username"><%= username %></p>
+  </header>
+
+  <div id="announcements">
+    <% messages.forEach(message => { %>
+      <div class="ad"><%= message %></div>
+    <% }) %>  
+  </div>
+</body>
+</html>

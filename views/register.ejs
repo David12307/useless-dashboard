@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    #container {
+      position: absolute;
+      background-color: #e9ecef;
+      width: 40%;
+      height: 70%;
+      border-radius: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      left: 30%;
+    }
+
+    input {
+      outline: none;
+      border: 0px;
+      width: 300px;
+      height: 50px;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    #usernameInput {
+      margin-top: 100px;
+    }
+
+    #submitButton {
+      border: 0px;
+      outline: none;
+      background-color: #6c757d;
+      width: 130px;
+      height: 40px;
+      border-radius: 10px;
+      margin-top: 10%;
+      margin-left: 29%;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <form action="/register" method="POST">
+      <input placeholder="Username" id="usernameInput" type="text" name="username"/>
+      <br>
+      <input placeholder="Email" type="email" name="email"/>
+      <br>
+      <input placeholder="Password" type="password" name="password"/>
+      <br>
+      <button id="submitButton" type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
